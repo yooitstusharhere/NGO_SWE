@@ -44,7 +44,7 @@ export default function DonatePage() {
         addDonation(project, amount, methodLabels[method]);
         setSuccess(true);
 
-        // Reset form after 2s and optionally redirect
+        
         setTimeout(() => {
             setSuccess(false);
             setProject('');
@@ -122,7 +122,7 @@ export default function DonatePage() {
                         }}
                     />
 
-                    {/* Preset Buttons */}
+
                     <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', mb: 3 }}>
                         {presets.map((p) => (
                             <Chip
@@ -136,7 +136,7 @@ export default function DonatePage() {
                         ))}
                     </Box>
 
-                    {/* Payment Method */}
+                   
                     <FormControl sx={{ mb: 3 }}>
                         <FormLabel sx={{ mb: 1, fontWeight: 600 }}>
                             Payment Method
