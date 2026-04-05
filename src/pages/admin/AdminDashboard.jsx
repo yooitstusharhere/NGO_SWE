@@ -24,7 +24,6 @@ import { useApp } from '../../context/AppContext';
 export default function AdminDashboard() {
     const { adminStats, donations } = useApp();
 
-    // Use actual donation records for the recent table
     const recentDonations = donations.slice(0, 6);
 
     return (
@@ -36,7 +35,7 @@ export default function AdminDashboard() {
                 Overview of all funds, donors, and projects.
             </Typography>
 
-            {/* Summary Cards */}
+
             <Box
                 sx={{
                     display: 'flex',
@@ -72,7 +71,6 @@ export default function AdminDashboard() {
                 />
             </Box>
 
-            {/* Quick Actions */}
             <Typography variant="h6" sx={{ mb: 2 }}>
                 Management
             </Typography>
@@ -97,7 +95,7 @@ export default function AdminDashboard() {
                 />
             </Box>
 
-            {/* Recent Donations Table */}
+
             <Typography variant="h6" sx={{ mb: 2 }}>
                 Recent Donations
             </Typography>
