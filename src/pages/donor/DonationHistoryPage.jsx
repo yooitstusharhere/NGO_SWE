@@ -23,7 +23,6 @@ export default function DonationHistoryPage() {
     const { donations } = useApp();
     const [selected, setSelected] = useState(null);
 
-    // Compute totals
     const totalAmount = donations.reduce((s, d) => s + d.amount, 0);
     const successCount = donations.filter((d) => d.status === 'Success').length;
 
@@ -36,7 +35,6 @@ export default function DonationHistoryPage() {
                 View all your past donations and their status.
             </Typography>
 
-            {/* Summary bar */}
             <Box
                 sx={{
                     display: 'flex',
@@ -99,7 +97,6 @@ export default function DonationHistoryPage() {
                 </List>
             </Card>
 
-            {/* Detail Dialog */}
             <Dialog
                 open={!!selected}
                 onClose={() => setSelected(null)}
